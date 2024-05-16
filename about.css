@@ -1,0 +1,492 @@
+
+
+body{
+  width: 100%;
+
+}
+@font-face {
+  font-family: "KacstTitle";
+  src:
+    local("KacstTitle"),
+    url("KacstTitle.ttf") format("opentype") tech(color-COLRv1),
+    url("KacstTitle.ttf") format("opentype"),
+    url("KacstTitle.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "segoeui";
+  src:
+    local("segoeui"),
+    url("segoeui.ttf") format("opentype") tech(color-COLRv1),
+    url("segoeuib.ttf") format("opentype"),
+    url("segoeuil.ttf") format("woff");
+}
+
+
+@font-face {
+  font-family: "azonix";
+  src:
+    local("azonix"),
+    url("Azonix.otf") format("opentype") tech(color-COLRv1),
+    url("Azonix.otf") format("opentype"),
+    url("Azonix.otf") format("woff");
+}
+
+svg{
+    width: 25px;
+}
+:root{
+  --color-1: #0f1016;
+  --text-color: #f0f0f0;
+  --accent-color: #006aff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 10vh;
+  z-index: 1000;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  top: 0;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+
+}
+
+.logo img{
+  width: 250px;
+  max-width: 100%;
+  mix-blend-mode: lighten;
+}
+
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav a{
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.2s;
+  color: white;
+}
+nav a:hover{
+  background-color: var(--accent-color);
+}
+nav .home-link{
+  margin-right: auto;
+}
+nav svg{
+  fill: var(--text-color);
+}
+#sidebar-active{
+  display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+}
+@media(max-width: 696px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100rem;
+    z-index: 10;
+    width: 300px;
+
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 1s cubic-bezier(0,.7,0,1) ;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+}
+
+
+
+
+
+@font-face {
+  font-family: "KacstTitle";
+  src:
+    local("KacstTitle"),
+    url("KacstTitle.ttf") format("opentype") tech(color-COLRv1),
+    url("KacstTitle.ttf") format("opentype"),
+    url("KacstTitle.ttf") format("woff");
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 50px;
+  padding: 20px;
+  background: linear-gradient(rgba(255, 255, 255, 0.621), white), url(m1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: 2px solid red;
+  overflow: hidden;
+  
+}
+
+
+main h1{
+   font-family:KacstTitle ;
+   font-weight: 500;
+   font-size: 60px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: rgb(0, 98, 209);
+}
+main p{
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 70rem;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:  justify;
+  direction: rtl;
+}
+
+main img{
+  width: 200px;
+  mix-blend-mode: multiply;
+}
+
+main .project_title::after{
+  content: '';
+  height: 10rem;
+  width: 70rem;
+  position: absolute;
+  z-index: 3;
+  /* border: 2px solid; */
+}
+
+
+.project_p::after{
+  content: '';
+  height: 60rem;
+  width: 60rem;
+  position: absolute;
+  z-index: 3;
+}
+
+
+
+.container{
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+  background-color: #f5f5f5;
+   color: #a4a4a4;
+
+}
+
+.container h2{
+  color: rgb(36, 36, 36);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-family: KacstTitle;
+}
+
+.container .services{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container .services .card{
+  width: 15rem;
+  height: 15rem;
+  text-align: center;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+  /* border-radius: 50%; */
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.container .services .card .content{
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.container .services .card .content .icon{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container .services .card .content .icon i {
+background-color: white;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+
+  position: relative;
+  overflow: hidden;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 5px solid rgb(123, 182, 255); */
+
+}
+
+.container .services .card .content .icon i img{
+  width: 100px;
+  stroke: rgb(0, 115, 255);
+  padding: 20px;
+  
+
+  
+
+}
+
+.container .services .card .content .title{
+  padding: 5px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(39, 39, 39);
+  transition: 0.3s;
+  position: absolute;
+  transform: translateY(120px);
+}
+
+@media (max-width: 730px) {
+   main h1 {
+    font-size: 50px;
+  }
+  main p{
+    width: 600px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 636px) {
+ main  h1 {
+    font-size: 40px;
+  }
+  main p{
+    width: 450px;
+    font-size: 25px;
+  }
+}
+
+
+@media (max-width: 490px) {
+ main  h1 {
+    font-size: 35px;
+  }
+ main p{
+    width: 390px;
+    font-size: 25px;
+  }
+  main img{
+    width: 150px;
+  }
+}
+
+@media (max-width: 425px) {
+  main h1 {
+    font-size: 40px;
+  }
+  main p{
+    width: 360px;
+    font-size: 25px;
+  }
+  img{
+    width: 100px;
+  }
+}
+
+
+@media (max-width: 390px) {
+  main h1 {
+    font-size: 40px;
+  }
+  main p{
+    width: 330px;
+    font-size: 20px;
+  }
+  img{
+    width: 100px;
+  }
+}
+
+
+@media (max-width: 365px) {
+  main h1 {
+    font-size: 35px;
+  }
+  main p{
+    width: 300px;
+    font-size: 18px;
+  }
+  img{
+    width: 100px;
+  }
+}
+
+@media (max-width: 333px) {
+  main h1 {
+    font-size: 35px;
+  }
+  main p{
+    width: 250px;
+    font-size: 18px;
+  }
+  img{
+    width: 100px;
+  }
+}
+
+@media (max-width: 241px) {
+  main h1 {
+    font-size: 35px;
+  }
+  main p{
+    width: 200px;
+    font-size: 18px;
+  }
+  img{
+    width: 100px;
+  }
+}
+
+@media (max-width: 200px) {
+  main h1 {
+    font-size: 35px;
+  }
+  main p{
+    width: 180px;
+    font-size: 18px;
+  }
+  img{
+    width: 100px;
+  }
+}
+
+
+
+
+.footer .container{
+	max-width: 1200px;
+	margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer{
+	background-color: #1b1b1b;
+    padding: 70px 0;
+}
+
+/* footer */
+.footer .container{
+	max-width: 2000px;
+  background-color: #0f1016;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer .container ul{
+	list-style: none;
+}
+.footer{
+	background-color:#0f1016;
+    padding: 70px 0;
+}
+
+.footerNav a{
+  color: white;
+  text-decoration: none;
+  font-family: KacstTitle;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 20px;
+
+}
+.footerNav{
+  color: white;
+  text-decoration: none;
+  font-family: KacstTitle;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 10px;
+
+}
+ .mobile a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family:KacstTitle ;
+}
